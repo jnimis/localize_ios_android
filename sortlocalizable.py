@@ -60,7 +60,7 @@ with open(filename, "r", errors='ignore') as ins:
             xmlLines.append(xml)
         elif len(lines) > 0:
             lines.sort()
-            print(lines)
+            #print(lines)
             sortedLines.extend(lines)
             lines = []
         else:
@@ -68,7 +68,7 @@ with open(filename, "r", errors='ignore') as ins:
 
     if len(lines) > 0:
         lines.sort()
-        print(lines)
+        #print(lines)
         sortedLines.extend(lines)
         lines = []
 

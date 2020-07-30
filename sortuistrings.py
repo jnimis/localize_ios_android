@@ -40,7 +40,7 @@ def cleanstringforxmlval(s):
 def cleanstringforxmlkey(s):
     return s.replace("\n", "").replace("<", "").replace(">", "").replace("\"", "")
 
-print("filepath: %s" % filepath)
+#print("filepath: %s" % filepath)
 
 with open(filepath, "r", errors='ignore') as ins:
     lines = []
