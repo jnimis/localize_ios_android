@@ -230,6 +230,11 @@ def organizeAndExportForAndroid(path, developmentLanguage):
                     with open(fname) as infile:
                         outfile.write(infile.read())
 
+        # clean up xml files
+        xmlFilesToClean = glob.glob('xml/*.xml')
+        for fileToClean in xmlFilesToClean:
+            os.remove(fileToClean)
+
 def localizeInterface(path, developmentLanguage):
     baseDir = os.path.join(path, "Base.lproj")
     developmentLanguage = os.path.splitext(developmentLanguage)[0] + ".lproj" # Add the extension if not exists
@@ -258,10 +263,10 @@ def localizeInterface(path, developmentLanguage):
                     os.rename(original, old)
                     os.system('iconv -f UTF-16 -t UTF-8 "%s" > "%s"' % (old, original))
 
-                # if os.path.isfile(old):
-                #     os.remove(old)
-                # if os.path.isfile(new):
-                #     os.remove(new)
+                if os.path.isfile(old):
+                    os.remove(old)
+                if os.path.isfile(new):
+                    os.remove(new)
 
 
 if __name__ == '__main__':
