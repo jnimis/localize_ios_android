@@ -1,6 +1,8 @@
 # localize_ios_android
 Python 3 scripts for generating, formatting, merging iOS localization files, and creating Android resources
 
+**NOTICE**: **use at your own risk** I built this for a specific project, developing iOS and Android concurrently, and haven't tested it outside of my own environment
+
 The main script is based on this gist: https://gist.github.com/yoichitgy/29bdd71c3556c2055cc0
 
 **note**: I disabled the method that creates new keys for each NSLocalizableString key in your code, because I'm using a different implementation of localizable, but this would be easy enough to re-enable
